@@ -18,6 +18,15 @@ function App() {
     setText("")
     setEmail("")
   }
+
+
+  // remove todo 
+  const RemoveTodo =(todo)=>{
+    const newTodoAfterRemove = list.filter(item => item.id !== todo.id)
+    setList(newTodoAfterRemove)
+  }
+
+
   return (
     <div className="App">
      <h1>testing-2-application github</h1>
@@ -36,6 +45,7 @@ function App() {
            <div key={item.id}>
              <li>{item.text}</li>
              <li>{item.email}</li>
+             <button onClick={()=> RemoveTodo(item)}>remove</button>
            </div>
          ))}
        </ul>
