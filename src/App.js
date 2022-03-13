@@ -1,4 +1,4 @@
-import React , {useState} from "react"
+import React , {useState , useRef , useEffect} from "react"
 
 // create new id => "react-id-generator";
 import nextId from "react-id-generator";
@@ -11,6 +11,12 @@ function App() {
   const [email , setEmail] = useState("")
   const [list , setList] = useState([])
 
+  // focus 
+  const inputRef = useRef(null)
+  useEffect(() => {
+    inputRef.current.focus()
+  } , [])
+  
   const handleSubmit = (e)=>{
     e.preventDefault()
     const newTodo = {id : nextId() , text , email}
@@ -33,8 +39,8 @@ function App() {
 
      <div>
        <form onSubmit={handleSubmit}>
-         <input type="text" value={text} onChange={(e)=> setText(e.target.value)}/>
-         <input type="text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
+         <input ref={inputRef} type="text" value={text} onChange={(e)=> setText(e.target.value)}/>
+         <input ref={inputRef}  type="text" value={email} onChange={(e)=> setEmail(e.target.value)}/>
          <button type="submit">add todo</button>
        </form>
      </div>
