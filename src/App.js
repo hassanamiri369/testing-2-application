@@ -20,7 +20,9 @@ function App() {
   const handleSubmit = (e)=>{
     e.preventDefault()
     const newTodo = {id : nextId() , text , email}
-    setList((ls) => [...ls , newTodo])
+    if(text && email){
+      setList((ls) => [...ls , newTodo])
+    }
     setText("")
     setEmail("")
   }
