@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: rgb(123, 123, 231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .App-logo {
