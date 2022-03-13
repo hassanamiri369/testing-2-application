@@ -11,7 +11,7 @@ function App() {
   const [email , setEmail] = useState("")
   const [list , setList] = useState([])
 
-  // focus 
+  // focus input
   const inputRef = useRef(null)
   useEffect(() => {
     inputRef.current.focus()
