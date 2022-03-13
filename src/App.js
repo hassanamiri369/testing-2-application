@@ -9,6 +9,8 @@ import './App.css';
 function App() {
   const [text , setText] = useState("")
   const [email , setEmail] = useState("")
+
+  // this is a local state
   const [list , setList] = useState([])
 
   // focus input
