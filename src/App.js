@@ -53,8 +53,8 @@ function App() {
        <ul>
          {list.map(item => (
            <div key={item.id}>
-             <li>{item.text}</li>
-             <li>{item.email}</li>
+             <li>Text : {item.text}</li>
+             <li> Email :{item.email}</li>
              <button onClick={()=> RemoveTodo(item)}>remove</button>
            </div>
          ))}
