@@ -36,6 +36,9 @@ function App() {
     setList(newTodoAfterRemove)
   }
 
+  // toggle todo 
+  
+
 
   return (
     <div className="App">
